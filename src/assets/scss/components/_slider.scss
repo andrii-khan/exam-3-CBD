@@ -1,0 +1,99 @@
+.ba-featured-product {
+    background-size: cover;
+    background-position: 50%;
+    background-color: #eaeaed;
+    padding: 50px 0;
+
+    @include breakpoint(medium) {
+        padding: 80px 0;
+    }
+
+    @include breakpoint(large) {
+        padding: 210px 0 220px;
+    }
+
+    &__title {
+        color: $primary-color;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    &__set {
+        font-size: 18px;
+        color: $black;
+        margin-bottom: 2px;
+    }
+
+    &__action {
+        padding-top: 20px;
+        font-weight: 600;
+        font-size: 18px;
+
+        @include breakpoint(large) {
+            padding-top: 40px;
+        }
+    }
+
+    &__price {
+        margin-right: 31px;
+        color: $black;
+    }
+
+    &__add-to-cart {
+        color: $primary-color;
+
+        &:hover {
+            color: $body-font-color;
+        }
+
+    }
+
+}
+
+.ba-featured-products {
+    margin-bottom: 40px;
+
+    @include breakpoint(medium) {
+        margin-bottom: 70px;
+    }
+
+    @include breakpoint(large) {
+        margin-bottom: 120px;
+    }
+
+    &__item {
+        outline: none;
+    }
+
+    &__dots {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        max-width: 1170px;
+        transform: translateY(-50%);
+    }
+
+    .slick-dots {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        button {
+            background-color: #fff;
+            width: 10px;
+            height: 17px;
+            display: block;
+            font-size: 0;
+            margin-bottom: 9px;
+            transition-property: background-color, height;
+        }
+
+        .slick-active {
+            button {
+                background-color: $primary-color;
+                height: 36px;
+            }
+        }
+    }
+}
